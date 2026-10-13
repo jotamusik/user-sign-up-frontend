@@ -1,35 +1,26 @@
-# React + TypeScript + Vite
+# User SignUp Kata - Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+This is a simple frontend application for user signup. 
+It allows users to create an account by providing their name and email. 
+The application includes form validation and error handling to ensure that 
+the user inputs are valid before submission. Also, it uses dependency injection to make easier
+to test the components.
 
-Currently, two official plugins are available:
+## How to Run the Application
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+1. Clone the repository to your local machine.
+2. Navigate to the project directory.
+3. Install the dependencies: `npm install`
+4. Start the development server: `npm run dev`
+5. Open your web browser and go to `http://localhost:5173` to see the application running.
 
-## React Compiler
+## How it´s done
+Used bounded contexts to separate the different parts of the application.
+- **User Context**: Contains the user signup form and handles user input validation.
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
-
-Note: This will impact Vite dev & build performances.
-You can also try [the experimental native React Compiler support in plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md#rust-react-compiler) by using `compiler: true` in the plugin options instead of using the Babel plugin.
-
-## Expanding the Oxlint configuration
-
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
-
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
-```
-
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+Used hexagonal architecture to separate the application into different layers:
+- **Domain Layer**: Contains the business logic and domain entities.
+- **Application Layer**: Contains the application services and use cases.
+- **Infrastructure Layer**: Contains the implementation of the interfaces defined in the domain layers.
+- **Presentation Layer**: Contains the user interface components and handles user interactions.
+- **Dependency Injection**: Used to inject dependencies into the components, making it easier to test and maintain the code.
