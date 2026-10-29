@@ -43,8 +43,8 @@ importers:
         specifier: ^1.0.0
         version: 1.0.0
       happy-dom:
-        specifier: ^20.14.5
-        version: 20.14.5
+        specifier: ^21.0.4
+        version: 21.0.4
       oxlint:
         specifier: ^1.81.0
         version: 1.87.0
@@ -56,7 +56,7 @@ importers:
         version: 8.3.3(@types/node@24.19.1)
       vitest:
         specifier: ^5.0.3
-        version: 5.0.3(@types/node@24.19.1)(happy-dom@20.14.5)(vite@8.3.3(@types/node@24.19.1))
+        version: 5.0.3(@types/node@24.19.1)(happy-dom@21.0.4)(vite@8.3.3(@types/node@24.19.1))
 
 packages:
 
@@ -582,8 +582,8 @@ packages:
     resolution: {integrity: sha512-3hN7NaskYvMDLQY55gnW3NQ+mesEAepTqlg+VEbj7zzqEMBVNhzcGYYeqFo/TlYz6eQiFcp1HcsCZO+nGgS8zg==}
     engines: {node: '>=6.9.0'}
 
-  happy-dom@20.14.5:
-    resolution: {integrity: sha512-x/RzkpWO40bTjIoT30iQtt64FLLmH/iRcUCN2X//bLx7H3ifkdfPXyqsro/OYtqzIAhiLMMA7mmiOR9C3NOKjQ==}
+  happy-dom@21.0.4:
+    resolution: {integrity: sha512-tFm+GaLBgo6o0awHnvHaNoraVo27qJ+2tZEtZ+cIa08hXbeitrxAJajLI05hsUy/2/YTKcUjQYzHe5mCcraLBw==}
     engines: {node: '>=20.0.0'}
 
   js-tokens@4.0.0:
@@ -1289,7 +1289,7 @@ snapshots:
 
   gensync@1.0.0-beta.2: {}
 
-  happy-dom@20.14.5:
+  happy-dom@21.0.4:
     dependencies:
       '@types/node': 24.19.1
       '@types/whatwg-mimetype': 3.0.2
@@ -1481,7 +1481,7 @@ snapshots:
       '@types/node': 24.19.1
       fsevents: 2.3.3
 
-  vitest@5.0.3(@types/node@24.19.1)(happy-dom@20.14.5)(vite@8.3.3(@types/node@24.19.1)):
+  vitest@5.0.3(@types/node@24.19.1)(happy-dom@21.0.4)(vite@8.3.3(@types/node@24.19.1)):
     dependencies:
       '@types/chai': 5.2.3
       '@vitest/mocker': 5.0.3(vite@8.3.3(@types/node@24.19.1))
@@ -1499,7 +1499,7 @@ snapshots:
       why-is-node-running: 3.2.1
     optionalDependencies:
       '@types/node': 24.19.1
-      happy-dom: 20.14.5
+      happy-dom: 21.0.4
     transitivePeerDependencies:
       - msw
 
